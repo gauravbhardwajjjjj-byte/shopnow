@@ -210,11 +210,14 @@ body {
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
 
+    .nav-links.show-menu {
+        display: flex;
+    }
+
     .menu-toggle {
         display: block;
     }
 }
-
 	</style>
 </head>
 <body>
@@ -300,6 +303,13 @@ body {
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+			const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", function () {
+    navLinks.classList.toggle("show-menu");
+});
+	</script>
 </body>
 </html>
